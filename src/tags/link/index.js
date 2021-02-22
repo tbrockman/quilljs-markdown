@@ -21,7 +21,7 @@ class Link {
             this.quillJS.deleteText(start, matchedText.length)
             this.quillJS.insertText(start, hrefText.slice(1, hrefText.length - 1),
               'link', hrefLink.slice(1, hrefLink.length - 1))
-            resolve(true)
+            resolve(false)
           }, 0)
         } else {
           resolve(false)

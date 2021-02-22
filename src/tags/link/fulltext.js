@@ -1,3 +1,5 @@
+// import { match } from 'core-js/fn/symbol'
+
 class Link {
   constructor (quillJS, options = {}) {
     this.quillJS = quillJS
@@ -15,7 +17,7 @@ class Link {
         const matchedText = text.match(pattern)[0]
         const hrefText = text.match(/(?:\[(.*?)\])/g)[0]
         const hrefLink = text.match(/(?:\((.*?)\))/g)[0]
-        const start = selection.index - 1 + startIndex
+
         if (startIndex !== -1) {
           setTimeout(() => {
             this.quillJS.deleteText(start, matchedText.length)
